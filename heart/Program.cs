@@ -14,21 +14,19 @@ namespace heart
             #region Variable
             Console.Title = "Heart";
             // Variablen für Fragen
-            string[] fragen = new string[11];
-            fragen[0] = "Magst du Kaffee?";
-            fragen[1] = "Ist Gabi super?";
-            fragen[2] = "Magst du Affen?";
-            fragen[3] = "Bisschen Glitzer?";
-            fragen[4] = "Helene Fischer?";
-            fragen[5] = "Ist Aufgeben eine Option?";
-            fragen[6] = "Sind Schwestern super?";
-            fragen[7] = "Keks?";
-            fragen[8] = "Liebst du Emma?";
-            fragen[9] = "Ananas auf Pizza?";
-            fragen[10] = "Magst du Whos?";
-            string J1 = "ja";
-            string N1 = "nein";
-           
+            string[,] fragen = {{"Magst du Kaffee?", "ja"},
+                                {"Ist Gabi super?", "ja"},
+                                {"Magst du Affen?", "nein"},
+                                {"Bisschen Glitzer?", "ja"},
+                                {"Helene Fischer?", "nein"},
+                                {"Ist Aufgeben eine Option?", "nein"},
+                                {"Sind Schwestern super?", "ja"},
+                                {"Keks?", "ja"},
+                                {"Liebst du Emma?", "ja"},
+                                {"Ananas auf Pizza?", "nein"},
+                                {"Magst du Whos?", "nein"},
+                               };
+
             //Spielfeld
             Console.SetWindowSize(40, 20);
             Console.SetBufferSize(40, 20);
@@ -41,15 +39,15 @@ namespace heart
 
             //Schleife
 
-            
+
                 FragezeileAntwortzeile();
                 FrageAusgeben();
-                Console.Write(fragen[0]);
+                Console.Write(fragen[0, 0]);
                 // Verknüpfung frage antwort
                 Console.SetCursorPosition(32, 2);
                 string input = Console.ReadLine().ToLower();
-                if (input == J1 )
-      
+                if (input == fragen[0, 1] )
+
                     {
                         Console.SetCursorPosition(14, 10);
                         RoterPunkt();
@@ -65,12 +63,12 @@ namespace heart
 
             FragezeileAntwortzeile();
             FrageAusgeben();
-            Console.Write(fragen[1]);
+            Console.Write(fragen[1, 0]);
             // Verknüpfung frage antwort
             Console.SetCursorPosition(32, 2);
             string input1 = Console.ReadLine().ToLower();
 
-            if (input1 == J1 )
+            if (input1 == fragen[1, 1] )
 
                 {
                     Console.SetCursorPosition(15, 12);
@@ -86,10 +84,10 @@ namespace heart
 
             FragezeileAntwortzeile();
             FrageAusgeben();
-            Console.Write(fragen[2]);
+            Console.Write(fragen[2, 0]);
             Console.SetCursorPosition(32, 2);
             string input2 = Console.ReadLine().ToLower();
-            if (input2 == N1 )
+            if (input2 == fragen[2, 1] )
 
                 {
                     Console.SetCursorPosition(16, 8);
@@ -105,10 +103,10 @@ namespace heart
 
             FragezeileAntwortzeile();
             FrageAusgeben();
-            Console.Write(fragen[3]);
+            Console.Write(fragen[3, 0]);
             Console.SetCursorPosition(32, 2);
             string input3 = Console.ReadLine().ToLower();
-            if (input3 == J1)
+            if (input3 == fragen[3, 1])
 
                 {
                     Console.SetCursorPosition(17, 14);
@@ -124,10 +122,10 @@ namespace heart
 
             FragezeileAntwortzeile();
             FrageAusgeben();
-            Console.Write(fragen[4]);
+            Console.Write(fragen[4, 0]);
             Console.SetCursorPosition(32, 2);
             string input4 = Console.ReadLine().ToLower();
-            if (input4 == N1 )
+            if (input4 == fragen[4, 1] )
 
                 {
                     Console.SetCursorPosition(18, 10);
@@ -144,10 +142,10 @@ namespace heart
 
             FragezeileAntwortzeile();
             FrageAusgeben();
-            Console.Write(fragen[5]);
+            Console.Write(fragen[5, 0]);
             Console.SetCursorPosition(32, 2);
             string input5 = Console.ReadLine().ToLower();
-            if (input5 == N1 )
+            if (input5 == fragen[5, 1] )
 
                 {
                     Console.SetCursorPosition(19, 16);
@@ -164,10 +162,10 @@ namespace heart
 
             FragezeileAntwortzeile();
             FrageAusgeben();
-            Console.Write(fragen[6]);
+            Console.Write(fragen[6, 0]);
             Console.SetCursorPosition(32, 2);
             string input6 = Console.ReadLine().ToLower();
-            if (input6 == J1 )
+            if (input6 == fragen[6, 1] )
 
                 {
                     Console.SetCursorPosition(20, 10);
@@ -184,10 +182,10 @@ namespace heart
 
             FragezeileAntwortzeile();
             FrageAusgeben();
-            Console.Write(fragen[7]);
+            Console.Write(fragen[7, 0]);
             Console.SetCursorPosition(32, 2);
             string input7 = Console.ReadLine().ToLower();
-            if (input7 == J1)
+            if (input7 == fragen[7, 1])
 
                 {
                     Console.SetCursorPosition(21, 14);
@@ -203,10 +201,10 @@ namespace heart
 
             FragezeileAntwortzeile();
             FrageAusgeben();
-            Console.Write(fragen[8]);
+            Console.Write(fragen[8, 0]);
             Console.SetCursorPosition(32, 2);
             string input8 = Console.ReadLine().ToLower();
-            if (input8 == J1 )
+            if (input8 == fragen[8, 1] )
 
                 {
                     Console.SetCursorPosition(22, 8);
@@ -222,10 +220,10 @@ namespace heart
 
             FragezeileAntwortzeile();
             FrageAusgeben();
-            Console.Write(fragen[9]);
+            Console.Write(fragen[9, 0]);
             Console.SetCursorPosition(32, 2);
             string input9 = Console.ReadLine().ToLower();
-            if (input9 == N1)
+            if (input9 == fragen[9, 1])
 
             {
                 Console.SetCursorPosition(23, 12);
@@ -242,10 +240,10 @@ namespace heart
 
             FragezeileAntwortzeile();
             FrageAusgeben();
-            Console.Write(fragen[10]);
+            Console.Write(fragen[10, 0]);
             Console.SetCursorPosition(32, 2);
             string input10 = Console.ReadLine().ToLower();
-            if (input10 == N1)
+            if (input10 == fragen[10, 1])
 
                 {
                     Console.SetCursorPosition(24, 10);
@@ -257,7 +255,7 @@ namespace heart
                     Console.SetCursorPosition(0, 0);
                     Console.Write("Leider Nein");
                 }
-            
+
                 //End
                 Console.SetCursorPosition(7, 7);
             Console.BackgroundColor = ConsoleColor.White;
@@ -302,14 +300,10 @@ namespace heart
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.Gray;
         }
-        
-        
-          
+
+
+
 
       }
 
     }
-
-
-
-
